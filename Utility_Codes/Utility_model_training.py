@@ -490,6 +490,3 @@ def evaluate_classifier_with_stratified_kfold(X_train, y_train, X_test, y_test, 
             f.write(str(conf_matrix_test) + '\n')
         print(f"Outputs saved to: {output_filename}")
         joblib.dump(classifier, os.path.join(save_path, f"{model_name}.joblib"))
-
-# Example usage:
-# evaluate_classifier_with_stratified_kfold(X_train, y_train, X_test, y_test, classifier, num_folds=10, save_path='/your/folder/path', model_name='your_model_name')
